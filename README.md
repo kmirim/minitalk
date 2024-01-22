@@ -1,17 +1,29 @@
+<h1 align="center"> Minitalk </h1>
+<p align="center"> . </p><br><br>
 
 
-### Instruções do projeto:
+
+<h2 align="center" #index> Index </h2>
+
+<p align="center"> • 
+  <a href="#Project_Instructions"> Project Instructions </a> •
+  <a href="#Mandatory_Section">Mandatory Section</a> • 
+  <a href="#Signal">Signal</a> 
+</p><br><br>
+
+<div id="Project_Instructions"/>
+<h3 #Project_Instructions> • Project Instructions: </h3>
 
 - Nomeie seus arquivos executáveis como cliente e servidor.
-- Tem que entregar um Makefile que irá compilar seus arquivos fonte. Não deve
-vincular novamente.
+- Tem que entregar um Makefile que irá compilar seus arquivos fonte.
 - Pode utilizar a **libft.h.**
 - Pode ter uma variável global por programa (uma para o cliente e outra para
 o servidor), mas terá que justificar seu uso.
 
-<aside>
-⚠️ Deve ser criado um programa de comunicação na forma de cliente e servidor.
-</aside>
+<div id="Mandatory_Section"/>
+<h3 #Mandatory_Section> Mandatory Section </h3>
+
+**Deve ser criado um programa de comunicação na forma de cliente e servidor**
 
 1. O servidor deve ser iniciado primeiro. Após o seu lançamento, deverá imprimir seu **PID.**
 2. O cliente usa dois parâmetros:
@@ -27,7 +39,8 @@ precisando reiniciar.
 Sinais UNIX.
 7. Só pode usar estes dois sinais: **SIGUSR1 e SIGUSR2.**
 
-### O que é sinal?
+<div id="Signal"/>
+<h3 #Signal> • Signal </h3>
 
 Um sinal é uma notificação de software a um processo da ocorrência de um evento. O mecanismo de sinais define uma maneira se trabalhar com eventos assíncronos no Unix.
 
@@ -44,7 +57,7 @@ iniciado com SIG e podem ser consultados em diversos locais:
 - **O usuário não pode definir sinais, mas o Unix disponibiliza dois sinais
 (SIGUSR1 e SIGUSR2) para o utilizador usar como bem entender.**
 
-### Geração de sinal:
+<h4> Geração de sinal: </h4>
 
 A partir do shell, utilizamos o comando **<kill>**
 
@@ -69,7 +82,8 @@ SIGUSR1 signal");
     ALRM TERM USR1 USR2 CLD PWR WINCH URG POLL STOP TSTP CONT TTIN
     TTOU VTALRM PROF XCPU XFSZ WAITING LWP FREEZE THAW CANCEL LOST
     RTMIN RTMIN+1 RTMIN+2 RTMIN+3 RTMAX-3 RTMAX-2 RTMAX-1 RTMAX
-     Valores numéricos de sinais:
+
+    - Valores numéricos de sinais:
     sIGHUP(1),SIGINT(2),SIGQUIT(3),SIGABRT(6),SIGKILL(9),SIGALRM(14),
     SIGTERM(15)
 
