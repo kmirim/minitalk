@@ -1,5 +1,7 @@
 <h1 align="center"> Minitalk </h1>
-<p align="center"> A server/Client communication using exclusively Unix Signals. </p><br><br>
+<p align="center">
+  <img loading="lazy" src="https://img.shields.io/static/v1?label=Status&message=in process&color=7159c1&style=for-the-badge&logo=ghost"/>
+</p><br>
 
 <h2 align="center" #index> Index </h2>
 
