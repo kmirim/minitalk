@@ -1,7 +1,5 @@
 <h1 align="center"> Minitalk </h1>
-<p align="center"> . </p><br><br>
-
-
+<p align="center"> A server/Client communication using exclusively Unix Signals. </p><br><br>
 
 <h2 align="center" #index> Index </h2>
 
