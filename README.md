@@ -102,3 +102,23 @@ int kill(pid_t pid, int sig);
 - Se `pid=-1`: sinal enviado para todos os processos para os quais ele pode enviar sinais (depende do UID do usuário).
 - Se `pid<0` (exceto -1): sinal é enviado para todos os processos com GroupID igual a |pid| .
 - **Se sucesso, kill retorna 0**. Se erro, retorna -1 e seta a variável errno.
+
+<h3>Estrutura do <strong>sigaction</strong></h3>
+
+- A chamada de sistema sigaction () é usada para alterar a ação tomada por um processo ao receber um sinal específico.
+- A estrutura sigaction é definida como algo como:
+
+```bash
+  struct sigaction {
+               void     (*sa_handler)(int);
+               void     (*sa_sigaction)(int, siginfo_t *, void *);
+               sigset_t   sa_mask;
+               int        sa_flags;
+               void     (*sa_restorer)(void);
+           };
+```
+- `sa_handler` especifica a ação a ser associada ao signum, podendo ser utilizada para as seguintes situações: 
+  - SIG_DFL para a ação padrão. 
+  - SIG_IGN para ignorar este sinal. 
+  - <strong> Um ponteiro para uma função de tratamento de sinal. Esta função recebe o número do sinal como único argumento.</strong>
+- Se `SA_SIGINFO` for especificado em sa_flags , então sa_sigaction (em vez de sa_handler) especifica a função de tratamento de sinal para signum.
